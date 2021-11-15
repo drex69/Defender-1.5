@@ -56,25 +56,25 @@ function draw() {
   }
 
   //DRAW STARS///////////////////////////////////////////////////////////////
-  if(game_state != -1)
-  {
+  //if(game_state != -1)
+  //{
     for(i=stars.length-1;i>=0;i--){
       stars[i].boundaries();
       stars[i].movement();
       stars[i].update();
       stars[i].draw();
     }
-  }
+  //}
 
   //RADAR//////////////////////////////////////////////////////////////
-  if(game_state != -1)
-  {
+  //if(game_state != -1)
+  //{
     radar.draw();
     radar.update();
-  }
+  //}
   //MOUNTAINS/////////////////////////////////////////////////////////////////
 
-  if(game_state == 0 || game_state == 2 || game_state == 3){
+  if(game_state == 0 || game_state == 2 || game_state == 3 || game_state == -1){
     for (i=mountains.length-1; i >= 0; i--){
       mountains[i].draw();
       mountains[i].update();
